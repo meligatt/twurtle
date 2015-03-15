@@ -31,6 +31,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Twitter & Dotenv for general Twitter API
+gem 'twitter', '~> 5.11.0'
+gem 'dotenv', '~> 0.11.1'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

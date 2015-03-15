@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'static_pages#new'
+
+  post 'static_pages#create'
+  get 'word_cloud#show'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
