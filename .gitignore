@@ -17,4 +17,4 @@
 /tmp
 
 #Ignore keys
-/.env
+.env
