@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  root 'static_pages#new'
 
-  post 'static_pages#create'
-  get 'word_cloud#show'
+  resources :word_clouds
 
+#  root 'static_pages#home'
+  root 'static_pages#home'
+#  get 'word_cloud/index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,6 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+#Load the Dotenv gem
+require 'dotenv'
+
+#Tells Dotenve to read .env file and set the variables
+Dotenv.load
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

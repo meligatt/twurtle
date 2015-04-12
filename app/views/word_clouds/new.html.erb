@@ -1,0 +1,49 @@
+<h1>Search a Twitter Handle</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_tag(new_word_cloud_path, method: :get) do %>
+
+			<%= label_tag %>
+			<%= text_field_tag :handle, '@' %>
+
+			<%= submit_tag "Create Word Cloud", class: "btn btn-primary" %>
+		<% end %>
+
+	</div>
+</div>
+
+ 
+<!-- aqui solo cargamos cosas que iran dentro del body-->
+
+<div class="jumbotron">
+
+
+	<div id="container">
+
+		<div class="row">
+
+			<% if request.GET.include? "handle" %>
+			<div id="tag_cloud">
+
+<h1>Most Frequently Used Words</h1>
+
+	<% tag_cloud(@twash) %>
+	<% if @tag_cloud_hash != nil %>
+   		<% @tag_cloud_hash.each_pair do |tag, size| %>
+    <div class="cloud_element">
+    	<%= content_tag(:a, tag.downcase, { :href => "#", :title => "#{tag}", :style => "font-size:#{size}px;" }) %>
+    	<% end %>
+	<% end %>
+	<% end %>
+      		</div>
+      	</div>
+		</div>
+	</div><!-- //fin de container-->
+
+
+	
+
+
+
+</div><!-- //fin de Jumbotron-->

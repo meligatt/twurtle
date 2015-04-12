@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def new
+  def home
   end
 
   def create

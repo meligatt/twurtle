@@ -8,8 +8,12 @@
 
 		<div class="row">
 
+            <% if request.GET.include? "q" %>
+
 
 			<% @search.each  do |tweet| %>
+
+
 
 			<div  class="item" style="width:195px; margin:0 auto;"> 
 
@@ -28,6 +32,13 @@
 				</div>
 			</div> <!-- //fin .item-->      
 			<%  end %>
+			<% end %>
 		</div>
 	</div><!-- //fin de container-->
 
+
+	
+
+
+
+</div><!-- //fin de Jumbotron-->
